@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<project>
+<!-- Configs do app, mude se quiser! -->
+    <app title="TorajoRP" file="TorajoRP" package="com.torajo.arthur" version="1.0.0" company="Arthur" />
+<config:android
+    minimum-sdk-version="24"
+    target-sdk-version="36"
+    build-tools-version="36.0.0"
+    gradle-version="8.11.1"
+    gradle-plugin="8.9.1"
+/>
+<!-- Configuração de interface (tanto no jogo, tanto no menu do android) -->
+    <meta title="TorajoRP: Mobile" description="TorajoRP para Android finalmente chegou! faça roleplay com seus personagens favoritos e jogue com seus amigos!" />
+    <window width="1280" height="720" background="#000000" />
+    <window orientation="landscape" />
+     <!-- MUDAR ISTO PODE FAZER O JOGO PARAR DE FUNCIONAR!! -->
+     <source path="source" />
+    <assets path="../Assets" rename="Assets" />
+    <haxelib name="flixel" />
+    <haxelib name="openfl-websocket" />
+    <section if="cpp">
+        <haxelib name="extension-admob" if="mobile" /> <!-- Não sei se remover isso pode causar problemas, mas provalvelmente sim porque tem scripts que usam! -->
+    </section>
+    <!-- Seu app ID de anúncios -->
+    <setenv name="ADMOB_APPID" value="seuAppID" if="android" /> 
+    <!-- NÃO MUDE ISSO! -->
+    <haxedef name="FLX_NO_DEBUG" if="release" />
+    <!-- Ícone do jogo -->
+    <icon path="../art/Android/game-icon.png" />
+    <set name="BUILD_DIR" value="export" />
+
+<!-- Cerificado, remova se não tiver um JKS. -->
+<certificate
+    path="seuJKS"
+    alias="seuAlias"
+    if="android"
+/>
+<!-- BIBLIOTECA MULTIPLAYER! -->
+    <haxelib name="TorajoWebSocket" />
+</project>

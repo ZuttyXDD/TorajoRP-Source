@@ -1,0 +1,19 @@
+Olá! Este é um manual de como compilar, e configurar
+se você tá se achando o bonzão achando que já sabe
+fazer tudo, CÊ TÁ FAZENDO ERRADO DO MESMO JEITO!!!
+
+O TorajoRP usa uma biblioteca própria, e precisa de
+configurações para poder compilar, então se tu é
+lezado é altamente recomendado ir em setup e depois
+executar android.bat
+
+maaaaaass você precisará das seguintes coisas
+instaladas:
+Android Studio mais recente;
+SDK Instalado;
+NDK Instalado;
+HaxeFlixel;
+HaxeLib;
+Entre Outros...
+
+Espero que isso tenha te ajudado, tchau tchau!
