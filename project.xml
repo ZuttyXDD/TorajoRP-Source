@@ -15,7 +15,7 @@
     <window orientation="landscape" />
      <!-- MUDAR ISTO PODE FAZER O JOGO PARAR DE FUNCIONAR!! -->
      <source path="source" />
-    <assets path="../Assets" rename="Assets" />
+    <assets path="Assets" rename="Assets" />
     <haxelib name="flixel" />
     <haxelib name="openfl-websocket" />
     <section if="cpp">
@@ -26,15 +26,9 @@
     <!-- NÃO MUDE ISSO! -->
     <haxedef name="FLX_NO_DEBUG" if="release" />
     <!-- Ícone do jogo -->
-    <icon path="../art/Android/game-icon.png" />
+    <icon path="art/Android/game-icon.png" />
     <set name="BUILD_DIR" value="export" />
 
-<!-- Cerificado, remova se não tiver um JKS. -->
-<certificate
-    path="seuJKS"
-    alias="seuAlias"
-    if="android"
-/>
 <!-- BIBLIOTECA MULTIPLAYER! -->
     <haxelib name="TorajoWebSocket" />
 </project>

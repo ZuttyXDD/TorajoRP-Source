@@ -38,7 +38,6 @@ class MenuState extends FlxState
 
        // Mostrar a janela de Termos e Privacidade?
     static inline var SHOW_CONSENT_WINDOW:Bool = true;
-    #end
 
     var consentSave:FlxSave;
     var consentRequired:Bool = false;
@@ -53,6 +52,7 @@ class MenuState extends FlxState
     
     #if android
     var menuBannerRequested:Bool = false;
+    #end
 
     function field(object:Dynamic, name:String):Dynamic
         return object == null ? null : Reflect.field(object, name);
@@ -151,8 +151,7 @@ else
         add(consentTitle);
 
         consentMessage = new FlxText(panelX + 54, panelY + 105, panelWidth - 108,
-            "Se isso apareceu, parabéns! o jogo compilou normalmente, pode desativar isso no ínicio do script, em "SHOW_CONSENT_WINDOW" marcando false, aqui vai alguns links se necessário!", 19);
-        consentMessage.setFormat(null, 19, FlxColor.WHITE, CENTER);
+    "Se isso apareceu, parabéns! O jogo compilou normalmente. Você pode desativar essa janela no início do script, alterando SHOW_CONSENT_WINDOW para false. Aqui estão alguns links úteis!", 19);
         consentMessage.wordWrap = true;
         consentMessage.scrollFactor.set(0, 0);
         add(consentMessage);
